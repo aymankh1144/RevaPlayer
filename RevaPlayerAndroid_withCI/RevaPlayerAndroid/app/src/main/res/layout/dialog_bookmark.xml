@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="@color/reva_bg_card"
+    android:padding="24dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="إضافة علامة" android:textColor="@color/reva_text_primary"
+        android:textSize="18sp" android:textStyle="bold" android:paddingBottom="16dp" />
+    <TextView android:id="@+id/tvBookmarkDialogPosition"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textColor="@color/reva_accent" android:textSize="13sp"
+        android:paddingBottom="16dp" android:fontFamily="monospace" />
+    <EditText android:id="@+id/etBookmarkTitle" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="@string/bookmark_title_hint"
+        android:textColor="@color/reva_text_primary" android:textColorHint="@color/reva_text_dim"
+        android:backgroundTint="@color/reva_border_soft" android:inputType="text"
+        android:paddingBottom="12dp" />
+    <EditText android:id="@+id/etBookmarkNote" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="@string/bookmark_note_hint"
+        android:textColor="@color/reva_text_primary" android:textColorHint="@color/reva_text_dim"
+        android:backgroundTint="@color/reva_border_soft" android:inputType="textMultiLine"
+        android:minLines="2" android:maxLines="4" android:paddingBottom="16dp" />
+    <Spinner android:id="@+id/spinnerCategory" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:backgroundTint="@color/reva_border_soft"
+        android:paddingBottom="20dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="end">
+        <Button android:id="@+id/btnCancelBookmark" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/cancel"
+            style="@style/RevaDialogButtonNeg" android:layout_marginEnd="8dp" />
+        <Button android:id="@+id/btnSaveBookmark" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/save"
+            android:backgroundTint="@color/reva_accent" android:textColor="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>

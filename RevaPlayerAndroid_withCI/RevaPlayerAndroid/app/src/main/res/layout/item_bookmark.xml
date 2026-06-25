@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:background="@drawable/bg_item_selector"
+    android:padding="14dp" android:gravity="center_vertical" android:layout_marginBottom="2dp">
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical">
+        <TextView android:id="@+id/tvBookmarkTitle" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/reva_text_primary"
+            android:textSize="14sp" android:textStyle="bold" android:ellipsize="end" android:lines="1" />
+        <TextView android:id="@+id/tvBookmarkPosition" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/reva_accent"
+            android:textSize="12sp" android:paddingTop="3dp" android:fontFamily="monospace" />
+        <TextView android:id="@+id/tvBookmarkNote" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/reva_text_secondary"
+            android:textSize="12sp" android:paddingTop="3dp" android:ellipsize="end" android:lines="2"
+            android:visibility="gone" />
+        <TextView android:id="@+id/tvBookmarkCategory" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/reva_text_dim"
+            android:textSize="11sp" android:paddingTop="4dp" />
+    </LinearLayout>
+    <ImageButton android:id="@+id/btnDeleteBookmark" android:layout_width="36dp"
+        android:layout_height="36dp" android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_delete" android:tint="@color/reva_text_dim" />
+</LinearLayout>

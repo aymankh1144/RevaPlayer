@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.RevaPlayer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/reva_accent</item>
+        <item name="colorPrimaryVariant">@color/reva_accent_light</item>
+        <item name="colorOnPrimary">@color/reva_text_primary</item>
+        <item name="colorSurface">@color/reva_bg_surface</item>
+        <item name="colorBackground">@color/reva_bg</item>
+        <item name="android:colorBackground">@color/reva_bg</item>
+        <item name="android:windowBackground">@color/reva_bg</item>
+        <item name="android:textColorPrimary">@color/reva_text_primary</item>
+        <item name="android:textColorSecondary">@color/reva_text_secondary</item>
+        <item name="android:statusBarColor">@color/reva_bg</item>
+        <item name="android:navigationBarColor">@color/reva_bg</item>
+    </style>
+
+    <style name="Theme.RevaPlayer.Player" parent="Theme.RevaPlayer">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:statusBarColor">#00000000</item>
+        <item name="android:navigationBarColor">#00000000</item>
+    </style>
+
+    <style name="RevaDialog" parent="Theme.MaterialComponents.Dialog">
+        <item name="colorSurface">@color/reva_bg_card</item>
+        <item name="android:colorBackground">@color/reva_bg_card</item>
+        <item name="android:textColorPrimary">@color/reva_text_primary</item>
+        <item name="android:textColorSecondary">@color/reva_text_secondary</item>
+        <item name="colorPrimary">@color/reva_accent</item>
+        <item name="buttonBarPositiveButtonStyle">@style/RevaDialogButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/RevaDialogButtonNeg</item>
+    </style>
+
+    <style name="RevaDialogButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/reva_accent</item>
+    </style>
+
+    <style name="RevaDialogButtonNeg" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/reva_text_secondary</item>
+    </style>
+
+    <style name="RevaBottomSheet" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/RevaBottomSheetStyle</item>
+        <item name="android:colorBackground">@color/reva_bg_surface</item>
+        <item name="android:textColorPrimary">@color/reva_text_primary</item>
+    </style>
+
+    <style name="RevaBottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="backgroundTint">@color/reva_bg_surface</item>
+        <item name="android:elevation">8dp</item>
+    </style>
+
+    <style name="RevaCard" parent="">
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+</resources>

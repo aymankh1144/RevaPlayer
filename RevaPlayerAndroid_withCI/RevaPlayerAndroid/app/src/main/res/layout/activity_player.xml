@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Video Surface -->
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:use_controller="false"
+        app:resize_mode="fit" />
+
+    <!-- Buffering Spinner -->
+    <ProgressBar
+        android:id="@+id/progressSpinner"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/reva_accent"
+        android:visibility="gone" />
+
+    <!-- Speed / Seek Overlay -->
+    <TextView
+        android:id="@+id/tvSpeedOverlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_overlay_pill"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <!-- Volume Overlay -->
+    <LinearLayout
+        android:id="@+id/volumeOverlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="32dp"
+        android:background="@drawable/bg_overlay_pill"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔊 "
+            android:textColor="@color/reva_volume_orange"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvVolumeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/reva_text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Controls Overlay -->
+    <FrameLayout
+        android:id="@+id/controlsOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_controls_gradient">
+
+        <!-- Top Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_icon_button"
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="رجوع"
+                android:tint="@color/reva_text_primary" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingHorizontal="12dp"
+                android:textColor="@color/reva_text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnSpeed"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_icon_button"
+                android:src="@drawable/ic_speed"
+                android:contentDescription="السرعة"
+                android:tint="@color/reva_text_primary" />
+
+            <ImageButton
+                android:id="@+id/btnPlaylist"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_icon_button"
+                android:src="@drawable/ic_playlist"
+                android:contentDescription="قائمة التشغيل"
+                android:tint="@color/reva_text_primary"
+                android:layout_marginStart="4dp" />
+
+        </LinearLayout>
+
+        <!-- Center Transport Controls -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnPrev"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_icon_button"
+                android:src="@drawable/ic_skip_previous"
+                android:contentDescription="السابق"
+                android:tint="@color/reva_text_primary" />
+
+            <ImageButton
+                android:id="@+id/btnPlayPause"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:background="@drawable/bg_play_button"
+                android:src="@drawable/ic_pause"
+                android:contentDescription="تشغيل/إيقاف"
+                android:layout_marginHorizontal="16dp"
+                android:tint="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_icon_button"
+                android:src="@drawable/ic_skip_next"
+                android:contentDescription="التالي"
+                android:tint="@color/reva_text_primary" />
+        </LinearLayout>
+
+        <!-- Bottom Controls -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Time Labels + Seekbar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/tvCurrentTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0:00"
+                    android:textColor="@color/reva_text_primary"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace" />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="10dp"
+                    android:max="1000"
+                    android:progressTint="@color/reva_accent"
+                    android:thumbTint="@color/reva_seekbar_thumb" />
+
+                <TextView
+                    android:id="@+id/tvDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0:00"
+                    android:textColor="@color/reva_text_secondary"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace" />
+            </LinearLayout>
+
+            <!-- Action Buttons Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:paddingTop="4dp">
+
+                <ImageButton
+                    android:id="@+id/btnBookmark"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_icon_button"
+                    android:src="@drawable/ic_bookmark_add"
+                    android:contentDescription="إضافة علامة"
+                    android:tint="@color/reva_text_primary" />
+
+                <ImageButton
+                    android:id="@+id/btnRotate"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_icon_button"
+                    android:src="@drawable/ic_screen_rotation"
+                    android:contentDescription="تدوير الشاشة"
+                    android:tint="@color/reva_text_primary"
+                    android:layout_marginStart="8dp" />
+
+                <ImageButton
+                    android:id="@+id/btnFullscreen"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_icon_button"
+                    android:src="@drawable/ic_fullscreen"
+                    android:contentDescription="ملء الشاشة"
+                    android:tint="@color/reva_text_primary"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

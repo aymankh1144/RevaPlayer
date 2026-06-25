@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- خلفية -->
+    <path android:fillColor="#101114"
+        android:pathData="M0,0 L108,0 L108,108 L0,108 Z"/>
+    <!-- حرف R أزرق -->
+    <path android:fillColor="#4f88ff"
+        android:pathData="M30,25 L30,83 L42,83 L42,61 L55,83 L69,83 L53,59 C60,56 65,50 65,41 C65,31 57,25 46,25 Z M42,36 L46,36 C51,36 54,39 54,43 C54,47 51,50 46,50 L42,50 Z"/>
+    <!-- نقطة زرقاء -->
+    <path android:fillColor="#4f88ff"
+        android:pathData="M72,73 A6,6 0,1,1 72.01,73 Z"/>
+</vector>

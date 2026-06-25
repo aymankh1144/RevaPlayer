@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/reva_bg">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:background="@color/reva_bg_surface" android:paddingHorizontal="8dp">
+
+        <ImageButton android:id="@+id/btnSearchBack" android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back" android:tint="@color/reva_text_primary" />
+
+        <EditText android:id="@+id/etSearch" android:layout_width="0dp"
+            android:layout_height="40dp" android:layout_weight="1"
+            android:background="@drawable/bg_card"
+            android:hint="ابحث في السجل..." android:textColorHint="@color/reva_text_dim"
+            android:textColor="@color/reva_text_primary" android:textSize="15sp"
+            android:paddingHorizontal="14dp" android:inputType="text"
+            android:imeOptions="actionSearch" android:singleLine="true"
+            android:layout_marginHorizontal="8dp" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="@color/reva_border" />
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvSearchResults"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:padding="8dp" android:clipToPadding="false" />
+</LinearLayout>

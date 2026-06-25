@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_item_selector"
+    android:padding="14dp"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="2dp">
+
+    <!-- Icon -->
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="🎬"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/bg_card"
+        android:layout_marginEnd="12dp" />
+
+    <!-- Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/reva_text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingBottom="3dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ProgressBar
+                android:id="@+id/itemProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:progressTint="@color/reva_accent"
+                android:progressBackgroundTint="@color/reva_seekbar_track"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvItemProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/reva_text_secondary"
+                android:textSize="11sp"
+                android:fontFamily="monospace" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Badge -->
+    <TextView
+        android:id="@+id/tvItemBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/reva_completed_green"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="3dp"
+        android:background="@drawable/bg_badge"
+        android:layout_marginHorizontal="8dp"
+        android:visibility="gone" />
+
+    <!-- More Button -->
+    <ImageButton
+        android:id="@+id/btnItemMore"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_more_vert"
+        android:tint="@color/reva_text_dim"
+        android:visibility="gone" />
+
+</LinearLayout>

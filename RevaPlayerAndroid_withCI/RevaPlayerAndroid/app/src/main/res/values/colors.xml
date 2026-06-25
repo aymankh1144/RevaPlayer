@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Reva Dark Theme -->
+    <color name="reva_bg">#101114</color>
+    <color name="reva_bg_surface">#12161d</color>
+    <color name="reva_bg_elevated">#1a2330</color>
+    <color name="reva_bg_card">#171c24</color>
+    <color name="reva_border">#1d2128</color>
+    <color name="reva_border_soft">#242d3a</color>
+    <color name="reva_accent">#4f88ff</color>
+    <color name="reva_accent_light">#77a4ff</color>
+    <color name="reva_accent_hover">#6698ff</color>
+    <color name="reva_select">#27354a</color>
+    <color name="reva_select_border">#44618d</color>
+    <color name="reva_text_primary">#e8ecf3</color>
+    <color name="reva_text_secondary">#9aa5b8</color>
+    <color name="reva_text_dim">#6b7688</color>
+    <color name="reva_volume_orange">#ff9d18</color>
+    <color name="reva_volume_boost">#ff5a00</color>
+    <color name="reva_completed_green">#3dd68c</color>
+    <color name="reva_overlay_bg">#CC080e16</color>
+    <color name="reva_control_bar_bg">#E6080d18</color>
+    <color name="reva_seekbar_track">#1c2431</color>
+    <color name="reva_seekbar_fill">#4a89dc</color>
+    <color name="reva_seekbar_thumb">#dfe7f3</color>
+    <!-- nav_item_color — referenced as @color in BottomNavigationView -->
+    <color name="nav_item_color">#6b7688</color>
+    <color name="nav_item_color_active">#4f88ff</color>
+</resources>

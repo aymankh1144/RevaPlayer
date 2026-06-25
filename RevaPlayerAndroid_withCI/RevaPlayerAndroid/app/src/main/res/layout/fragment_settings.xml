@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/reva_bg">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="الإعدادات" android:textColor="@color/reva_text_primary"
+            android:textSize="20sp" android:textStyle="bold" android:paddingBottom="20dp" />
+        <!-- Section: Playback -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="التشغيل" android:textColor="@color/reva_accent"
+            android:textSize="11sp" android:textStyle="bold" android:letterSpacing="0.1"
+            android:paddingBottom="10dp" android:paddingTop="8dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:background="@drawable/bg_card"
+            android:padding="16dp" android:gravity="center_vertical" android:layout_marginBottom="2dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="استئناف المشاهدة تلقائياً" android:textColor="@color/reva_text_primary"
+                    android:textSize="14sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="يتذكر مكان توقفك في كل فيديو" android:textColor="@color/reva_text_secondary"
+                    android:textSize="12sp" android:paddingTop="2dp" />
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat android:id="@+id/switchAutoResume" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:thumbTint="@color/reva_accent" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:background="@drawable/bg_card"
+            android:padding="16dp" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="صورة داخل صورة" android:textColor="@color/reva_text_primary"
+                    android:textSize="14sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="تشغيل PiP عند الخروج من التطبيق" android:textColor="@color/reva_text_secondary"
+                    android:textSize="12sp" android:paddingTop="2dp" />
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat android:id="@+id/switchPip" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:thumbTint="@color/reva_accent" />
+        </LinearLayout>
+        <!-- Section: Data -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="البيانات" android:textColor="@color/reva_accent"
+            android:textSize="11sp" android:textStyle="bold" android:letterSpacing="0.1"
+            android:paddingBottom="10dp" android:paddingTop="8dp" />
+        <LinearLayout android:id="@+id/btnResetData" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:background="@drawable/bg_card"
+            android:padding="16dp" android:clickable="true" android:focusable="true">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="إعادة تعيين جميع البيانات" android:textColor="#ff5a5a"
+                android:textSize="14sp" android:textStyle="bold" />
+        </LinearLayout>
+        <!-- Version -->
+        <TextView android:id="@+id/tvVersion" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/reva_text_dim"
+            android:textSize="12sp" android:layout_gravity="center" android:paddingTop="32dp" />
+    </LinearLayout>
+</ScrollView>

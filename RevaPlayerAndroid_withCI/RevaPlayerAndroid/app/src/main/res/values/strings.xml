@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Reva Player</string>
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_history">السجل</string>
+    <string name="nav_bookmarks">العلامات</string>
+    <string name="nav_settings">الإعدادات</string>
+    <string name="resume_watching">متابعة المشاهدة</string>
+    <string name="recent_videos">الأخيرة</string>
+    <string name="no_history">لا يوجد سجل بعد</string>
+    <string name="no_bookmarks">لا توجد علامات بعد</string>
+    <string name="open_file">فتح ملف</string>
+    <string name="add_bookmark">إضافة علامة</string>
+    <string name="bookmark_title_hint">عنوان العلامة (اختياري)</string>
+    <string name="bookmark_note_hint">ملاحظة (اختياري)</string>
+    <string name="save">حفظ</string>
+    <string name="cancel">إلغاء</string>
+    <string name="settings_auto_resume">استئناف المشاهدة تلقائياً</string>
+    <string name="settings_pip">صورة داخل صورة</string>
+    <string name="settings_reset">إعادة تعيين البيانات</string>
+    <string name="browse_files">تصفح الملفات</string>
+    <string name="history_empty">السجل فارغ</string>
+    <string name="bookmarks_empty">لا توجد علامات</string>
+    <string name="search_hint">ابحث في السجل...</string>
+</resources>
