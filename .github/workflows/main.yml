@@ -19,11 +19,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Android SDK
-        uses: actions/setup-android@v1
-        with:
-          api-level: 34
-          build-tools-version: '34.0.0'
+      # تم إزالة خطوة Setup Android SDK هنا لأنها مدمجة تلقائياً
 
       - name: Find project directory
         run: |
