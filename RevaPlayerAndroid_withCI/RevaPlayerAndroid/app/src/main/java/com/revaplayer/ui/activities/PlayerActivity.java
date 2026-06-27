@@ -1,5 +1,8 @@
 package com.revaplayer.ui.activities;
 
+import androidx.appcompat.app.AlertDialog;
+import android.widget.LinearLayout;
+
 import android.annotation.SuppressLint;
 import android.app.PictureInPictureParams;
 import android.content.Context;
@@ -459,7 +462,7 @@ public class PlayerActivity extends AppCompatActivity {
         rv.setLayoutManager(new LinearLayoutManager(this));
         PlaylistAdapter adapter = new PlaylistAdapter(playlist, currentPlaylistIndex, index -> {
             currentPlaylistIndex = index;
-            player.seekToMediaItem(index);
+            player.seekTo(index, 0);
             player.play();
             sheet.dismiss();
         });
