@@ -26,6 +26,7 @@
         </activity>
 
         <activity android:name=".ui.activities.PlayerActivity"
+            android:exported="true"
             android:theme="@style/Theme.RevaPlayer.Player"
             android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden"
             android:supportsPictureInPicture="true"
