@@ -6,7 +6,7 @@
         <item name="colorPrimaryVariant">@color/reva_accent_light</item>
         <item name="colorOnPrimary">@color/reva_text_primary</item>
         <item name="colorSurface">@color/reva_bg_surface</item>
-        <item name="colorBackground">@color/reva_bg</item>
+<item name="android:colorBackground">@color/reva_bg</item>
         <item name="android:windowBackground">@color/reva_bg</item>
         <item name="android:textColorPrimary">@color/reva_text_primary</item>
         <item name="android:textColorSecondary">@color/reva_text_secondary</item>
