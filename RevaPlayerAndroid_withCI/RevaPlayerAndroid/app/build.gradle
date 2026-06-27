@@ -39,8 +39,7 @@ android {
 
 dependencies {
     // Desugaring (لدعم Java 8 streams على API 26+)
-    coreLibraryDesugaring 'com.android.tools.desugar_jdk_libs:2.0.4'
-
+coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
     // AndroidX
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'androidx.core:core:1.13.1'
