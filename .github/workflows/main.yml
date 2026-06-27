@@ -19,25 +19,20 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Android SDK
-        uses: actions/setup-android@v1
-        with:
-          api-level: 34
-          build-tools-version: '34.0.0'
-
       - name: Find project directory
         run: |
           PROJECT=$(find . -name "settings.gradle" | head -1 | xargs dirname)
           echo "PROJECT_DIR=$PROJECT" >> $GITHUB_ENV
-          echo "Project found at: $PROJECT"
-          ls $PROJECT
+          echo "Found: $PROJECT"
 
       - name: Make gradlew executable
         run: chmod +x ${{ env.PROJECT_DIR }}/gradlew
 
       - name: Build Debug APK
         working-directory: ${{ env.PROJECT_DIR }}
-        run: ./gradlew assembleDebug --no-daemon
+        env:
+          ANDROID_HOME: /usr/local/lib/android/sdk
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
